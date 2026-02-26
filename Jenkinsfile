@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                echo "Cloning repository..."
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t backend-app ./backend'
